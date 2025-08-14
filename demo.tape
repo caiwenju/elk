@@ -46,7 +46,7 @@ Enter
 Sleep 6s
 
 Enter 2
-Type "curl -s http://localhost:9200 -u elastic:barry"
+Type "curl -s http://localhost:9200 -u elastic:admin@1234"
 Sleep 3s
 Enter
 Sleep 12s

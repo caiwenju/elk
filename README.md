@@ -1,5 +1,5 @@
 # Elastic stack (ELK) on Docker
-
+登录使用elastic用户
 [![Elastic Stack version](https://img.shields.io/badge/Elastic%20Stack-8.19.1-00bfb3?style=flat&logo=elastic-stack)](https://www.elastic.co/blog/category/releases)
 [![Build Status](https://github.com/deviantony/docker-elk/actions/workflows/ci.yml/badge.svg?branch=release-8.x)](https://github.com/deviantony/docker-elk/actions/workflows/ci.yml?query=branch%3Arelease-8.x)
 [![Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://app.gitter.im/#/room/#deviantony_docker-elk:gitter.im)
@@ -167,11 +167,11 @@ Give Kibana about a minute to initialize, then access the Kibana web UI by openi
 browser and use the following (default) credentials to log in:
 
 * user: *elastic*
-* password: *barry*
+* password: *admin@1234*
 
 > [!NOTE]
 > Upon the initial startup, the `elastic`, `logstash_internal` and `kibana_system` Elasticsearch users are initialized
-> with the values of the passwords defined in the [`.env`](.env) file (_"barry"_ by default). The first one is the
+> with the values of the passwords defined in the [`.env`](.env) file (_"admin@1234"_ by default). The first one is the
 > [built-in superuser][builtin-users], the other two are used by Kibana and Logstash respectively to communicate with
 > Elasticsearch. This task is only performed during the _initial_ startup of the stack. To change users' passwords
 > _after_ they have been initialized, please refer to the instructions in the next section.
@@ -186,7 +186,7 @@ browser and use the following (default) credentials to log in:
 > [!WARNING]
 > Starting with Elastic v8.0.0, it is no longer possible to run Kibana using the bootstrapped privileged `elastic` user.
 
-The _"barry"_ password set by default for all aforementioned users is **unsecure**. For increased security, we will
+The _"admin@1234"_ password set by default for all aforementioned users is **unsecure**. For increased security, we will
 reset the passwords of all aforementioned Elasticsearch users to random secrets.
 
 1. Reset passwords for default users
